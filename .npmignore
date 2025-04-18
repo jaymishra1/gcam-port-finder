@@ -1,0 +1,31 @@
+# Source code
+/src
+
+# Development files
+.babelrc
+.eslintrc
+.prettierrc
+rollup.config.js
+jest.config.js
+
+# Git files
+.git
+.gitignore
+.github
+
+# Development directories
+/examples
+/tests
+/docs
+/coverage
+
+# CI/CD
+.travis.yml
+.circleci
+
+# Misc
+node_modules
+npm-debug.log
+yarn-error.log
+.DS_Store
+*.tgz

@@ -1,13 +1,17 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+// Main component
+import GCamPortFinder from "./components/GCamPortFinder";
 
-import App from "./App";
+// Individual components
+import SearchBox from "./components/SearchBox";
+import BrandList from "./components/BrandList";
+import InstallGuide from "./components/InstallGuide";
+import ResultList from "./components/ResultList";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
+// Utils
+import { fetchGCamPorts } from "./utils/api";
 
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+// Default export
+export default GCamPortFinder;
+
+// Named exports for individual components and utilities
+export { SearchBox, BrandList, InstallGuide, ResultList, fetchGCamPorts };

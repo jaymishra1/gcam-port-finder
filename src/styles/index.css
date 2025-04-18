@@ -1,0 +1,415 @@
+/* Main Container */
+.gcam-port-finder-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Theme Styles */
+.theme-light {
+  background-color: #fff;
+  color: #333;
+}
+
+.theme-dark {
+  background-color: #222;
+  color: #f1f1f1;
+}
+
+.theme-dark input,
+.theme-dark button {
+  background-color: #333;
+  color: #f1f1f1;
+  border-color: #444;
+}
+
+/* Title */
+.gcam-port-finder-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Search Box */
+.gcam-search-container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.gcam-search-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.gcam-search-input:focus {
+  border-color: #4caf50;
+}
+
+.gcam-search-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.gcam-search-button:hover {
+  background-color: #3e8e41;
+}
+
+/* Install Guide Button */
+.gcam-install-guide-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.gcam-install-guide-button:hover {
+  background-color: #3e8e41;
+}
+
+/* Brand Title */
+.gcam-brand-title {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0 15px;
+  font-weight: 500;
+}
+
+/* Brand List */
+.gcam-brand-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.gcam-brand-item {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.theme-dark .gcam-brand-item {
+  background-color: #333;
+  border-color: #444;
+}
+
+.gcam-brand-item:hover {
+  background-color: #e0e0e0;
+}
+
+.theme-dark .gcam-brand-item:hover {
+  background-color: #444;
+}
+
+.gcam-brand-item.selected {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.theme-dark .gcam-brand-item.selected {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+/* Loading State */
+.gcam-loading {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #777;
+}
+
+/* No Results */
+.gcam-no-results {
+  text-align: center;
+  padding: 30px;
+  font-size: 16px;
+  color: #777;
+  border: 1px dashed #ddd;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+/* Results Container */
+.gcam-results-container {
+  margin-top: 20px;
+}
+
+.gcam-results-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Result Items */
+.gcam-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gcam-result-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.theme-dark .gcam-result-item {
+  border-color: #444;
+}
+
+.gcam-result-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.theme-dark .gcam-result-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gcam-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.gcam-result-title {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.gcam-result-version {
+  background-color: #4caf50;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.gcam-result-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.gcam-result-details .label {
+  color: #777;
+  margin-right: 5px;
+}
+
+.gcam-result-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.gcam-download-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  flex: 1;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.gcam-download-button:hover {
+  background-color: #3e8e41;
+}
+
+.gcam-details-button {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  flex: 1;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.theme-dark .gcam-details-button {
+  background-color: #333;
+  color: #f1f1f1;
+  border-color: #444;
+}
+
+.gcam-details-button:hover {
+  background-color: #e0e0e0;
+}
+
+.theme-dark .gcam-details-button:hover {
+  background-color: #444;
+}
+
+/* Install Guide Overlay */
+.gcam-install-guide-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gcam-install-guide-content {
+  background-color: white;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .gcam-install-guide-content {
+  background-color: #222;
+  color: #f1f1f1;
+}
+
+.gcam-install-guide-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #777;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.gcam-install-guide-close:hover {
+  background-color: #f1f1f1;
+}
+
+.theme-dark .gcam-install-guide-close:hover {
+  background-color: #333;
+}
+
+.gcam-install-guide-steps {
+  margin-top: 20px;
+}
+
+.gcam-install-step {
+  margin-bottom: 20px;
+}
+
+.gcam-install-step h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #4caf50;
+}
+
+.gcam-install-step p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  color: #555;
+}
+
+.theme-dark .gcam-install-step p {
+  color: #ccc;
+}
+
+.gcam-install-note {
+  background-color: #f9f9f9;
+  border-left: 4px solid #4caf50;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 0 4px 4px 0;
+}
+
+.theme-dark .gcam-install-note {
+  background-color: #333;
+  border-left-color: #4caf50;
+}
+
+.gcam-install-note h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #4caf50;
+}
+
+.gcam-install-note ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.gcam-install-note li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .gcam-port-finder-container {
+    padding: 15px;
+  }
+
+  .gcam-search-container {
+    flex-direction: column;
+  }
+
+  .gcam-search-button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .gcam-result-details {
+    grid-template-columns: 1fr;
+  }
+}
